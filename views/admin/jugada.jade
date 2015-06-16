@@ -1,0 +1,35 @@
+extends ../layout.jade
+block contenido
+	div(id="secciona" class="text-center")
+		h1(class="fuentetitle texto grande3") Panel de administracion
+		h2(class="mediano") Agregar Jugada
+	div(id ="divjugada")
+		form(method="post" enctype="multipart/form-data" action="/jugada" style="margin-top:1.5em;")
+			div(class="form-group")
+				label(for="Nombre1") Nombre Equipo 1
+				select(type="text",name="Nombre1",class="form-control")
+					each equipo in produc
+						option=equipo.title
+			div(class="form-group")
+				label(for="pitcher1") Pitcher
+				select(type="text",name="pitcher1",class="form-control")
+					each equipo in produc
+						option=equipo.pitcher
+			div(class="form-group")
+				label(for="Nombre2") Nombre Equipo 2
+				select(type="text",name="Nombre2",class="form-control")
+					each equipo in produc
+						option=equipo.title
+			div(class="form-group")
+				label(for="pitcher2") Pitcher
+				select(type="text",name="pitcher2",class="form-control")
+					each equipo in produc
+						option=equipo.pitcher
+			div(class="form-group")
+				label(for="Descripcion") Descripcion de la jugada
+				textarea(type="text" name="Descripcion" placeholder="Descripcion" class="form-control")
+			div(class="form-group")
+				label(for="Jugada") Jugada
+				input(type="text" name="Jugada" placeholder="Jugada" class="form-control")
+			div(class="form-group")
+				input(type="submit" class="btn btn-info col-md-4" id="btnjugada" value="Agregar Jugada")

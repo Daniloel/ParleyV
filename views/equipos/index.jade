@@ -1,0 +1,20 @@
+extends ../layout.jade
+block contenido
+	div(class="text-center")
+		h2(class="fuentetitle grande texto") Predicciones
+		p(class="animated flash" id="pseccion") Las mejores en un solo lugar
+	each equipo in produc
+		div(id="set")
+			div(class="divequipos col-md-6 col-sm-6 col-xs-12 text-center")
+				h2(id="tituloequi")=equipo.Nombre1
+				img(id="imgequipos" src="#{equipo.image1}" class="imagespos col-xs-7 col-md-6")
+				p(style="margin-top:1em") #[small(class="lato small") #{equipo.pitcher1}]
+			div(class="text-center" id="vs")
+				h1(class="fuentetitle grande") VS
+			div(class="divequipos col-md-6 col-sm-6 col-xs-12 text-center")
+				h2(id="tituloequi")=equipo.Nombre2
+				img(id="imgequipos2" src="#{equipo.image2}" class="imagespos col-xs-7 col-md-6")
+				p(style="margin-top:1em") #[small(class="lato small") #{equipo.pitcher2}]
+			div(class="col-md-12 col-sm-6 col-xs-12 text-center")
+				p(id="destext" style="margin-top:1em") #[small(class="lato small") #{equipo.descripcion}]
+				h1(class="texto")=equipo.jugada

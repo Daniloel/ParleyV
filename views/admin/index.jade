@@ -1,0 +1,27 @@
+extends ../layout.jade
+block contenido
+	div(id="secciona")
+		h1(class="fuentetitle texto grande3") Panel de administracion
+		a(id="Agregar" href="equipos/new") Agregar nuevos equipos
+		a(id="Agregarj" href="admin/jugada") Agregar jugada
+		table(class="table")
+			caption(id="captiona") Equipos Actuales
+			thead
+					tr
+					th #
+					th(class="text-center") Nombre
+					th(class="text-center") Pitcher
+					th(class="text-center") Imagen
+					th(class="text-center") Acciones
+			tbody
+				each equipos in produc
+					tr
+						td=equipos.id
+						td=equipos.title
+						td=equipos.pitcher
+						td
+							a(href="#{equipos.imageUrl}" class="btn") Ver Imagen
+						td 
+							a(href="/equipos/edit/#{equipos.id}") Editar
+							=" - "
+							a(href="/equipos/eliminar/#{equipos.id}") Eliminar

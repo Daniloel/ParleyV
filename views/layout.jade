@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		title ¡Tu parley venezuela!
+		meta(charset="utf-8")
+		link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet")
+		link(href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="/css/main.css")
+		link(rel="stylesheet" href="/css/animate.css" type="text/css")
+		script(src="/js/jquery-2.1.4.js")
+		script(src="/js/scriptcanvas.js")
+	body
+		header
+			canvas(id="miCanvas")
+			canvas(id="miCanvas2")
+			nav
+				ul
+					li(class="col-md-3")
+						a(id="titulo" href="/") Tu parley venezuela
+					li(class="col-md-3")
+						a(href="equipos") Predicciones
+					li(class="col-md-3")
+						a Resultados
+					li(class="col-md-3")
+						a(href="/contacto") Contacto
+		block contenido

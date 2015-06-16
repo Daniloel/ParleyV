@@ -1,0 +1,21 @@
+extends ../layout.jade
+block contenido
+	div(id="secciona" class="col-md-5")
+		h1(class="fuentetitle texto grande3") Panel de administracion
+		h2(class="mediano") Agregar equipos
+		form(method="post" enctype="multipart/form-data" action="/equipos" style="margin-top:1.5em;")
+			div(class="form-group")
+				label(for="Nombre") Nombre
+				input(type="text" name="Nombre" placeholder="Nombre" class="form-control")
+			div(class="form-group")
+				label(for="Pitcher") Pitcher
+				input(type="text" name="Pitcher" placeholder="Pitcher" class="form-control")
+			div(class="form-group")
+				label(for="Clave") Contraseña
+				input(type="password" name="Clave" placeholder="Contraseña" class="form-control")
+			div(class="form-group")
+				label Imagen
+				input(type="file" name="imagen")
+			div(class="form-group")
+				input(type="submit" class="btn btn-info col-md-4" id="btnEditar" value="Agregar")
+			
